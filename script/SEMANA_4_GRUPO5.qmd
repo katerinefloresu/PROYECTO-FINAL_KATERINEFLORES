@@ -1,0 +1,28 @@
+---
+title: "PROYECTO FINAL"
+author: "GRUPO_5"
+format: html
+editor: visual
+---
+
+## PROYECTO FINAL
+
+**INTEGRANTES:**\
+Huahuasoncco Sifuentes Rosario\
+Marzano Gomez Rocio\
+Tineo Berrospi Karol\
+Flores Ubaldo Katherine\
+Bartolo Najarro Yenny\
+\
+**SEMANA 4: Descarga de un archivo en formato CSV del repositorio GIBHUB**
+
+```         
+```
+
+```         
+```
+
+```{r}
+s04_diabetes <- read_csv("C:/Users/HP/Downloads/s04_diabetes.csv")
+View(s04_diabetes)
+```

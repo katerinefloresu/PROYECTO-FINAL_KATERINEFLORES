@@ -1,0 +1,23 @@
+---
+title: "PROYECTO FINAL"
+author: "GRUPO_5"
+format: html
+editor: visual
+---
+
+## PROYECTO FINAL
+
+**INTEGRANTES:**\
+Huahuasoncco Sifuentes Rosario\
+Marzano Gomez Rocio\
+Tineo Berrospi Karol\
+Flores Ubaldo Katherine\
+Bartolo Najarro Yenny\
+\
+**SEMANA 2: Creación de proyecto**
+
+```{}
+```
+
+```{}
+```

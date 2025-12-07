@@ -1,0 +1,161 @@
+---
+title: "PROYECTO FINAL"
+author: "GRUPO NRO5"
+format: html
+editor: visual
+---
+
+## PROYECTO FINAL
+
+**INTEGRANTES:**
+
+Huahuasoncco Sifuentes Rosario
+
+Tineo Berrospi Karol
+
+Marzano Gómez Rocío
+
+Flores Ubaldo Katerine
+
+Bartalo Najarro Yenny
+
+## SEMANA 14: Análisis de Regresión, Univariado y Multivariado
+
+**CASO No 1**
+
+```{r}
+set.seed(123)
+n <- 100
+IMC <- rnorm(n, 27, 4)
+PAS <- 90 + 1.5*IMC + rnorm(n, 0, 8)
+datos <- data.frame(IMC, PAS)
+head(datos)
+```
+
+```{r}
+modelo_uni <- lm(PAS ~ IMC, data = datos)
+summary(modelo_uni)
+```
+
+```{r}
+plot(datos$IMC, datos$PAS, main="PAS vs IMC", xlab="IMC", ylab="PAS")
+abline(modelo_uni, lwd=2)
+```
+
+**CASO No 2**
+
+```{r}
+set.seed(123)
+n <- 120
+IMC <- rnorm(n, 27, 4)
+Edad <- rnorm(n, 45, 10)
+Actividad <- rnorm(n, 3, 1)
+```
+
+```{r}
+PAS <- 80 + 1.2*IMC + 0.6*Edad - 2.5*Actividad + rnorm(n, 0, 10)
+datos2 <- data.frame(IMC, Edad, Actividad, PAS)
+head(datos2)
+```
+
+```{r}
+modelo_multi <- lm(PAS ~ IMC + Edad + Actividad, data = datos2)
+summary(modelo_multi)
+```
+
+```{r}
+par(mfrow=c(2,2))
+plot(modelo_multi)
+```
+
+**CASO No 3**
+
+```{r}
+set.seed(123)
+Edad <- sample(20:70, 30, replace=TRUE)
+Glucosa <- 70 + 0.9*Edad + rnorm(30, 0, 8)
+datos <- data.frame(Edad, Glucosa)
+```
+
+```{r}
+plot(Edad, Glucosa,
+     main = "Relación entre Edad y Glucosa",
+     xlab = "Edad (años)",
+     ylab = "Glucosa (mg/dL)",
+     pch = 19)
+abline(lm(Glucosa ~ Edad), col="blue", lwd=2)
+```
+
+**CASO No 4**
+
+```{r}
+set.seed(123)
+n <- 80
+IMC <- rnorm(n, 27, 4)
+Edad <- rnorm(n, 45, 10)
+Grasas <- rnorm(n, 60, 15)
+Colesterol <- 95 + 2.1*IMC + 0.85*Edad + 1.45*Grasas + rnorm(n, 0, 15)
+datos <- data.frame(IMC, Edad, Grasas, Colesterol)
+head(datos)
+```
+
+```{r}
+modelo <- lm(Colesterol ~ IMC + Edad + Grasas, data = datos)
+summary(modelo)
+```
+
+```{r}
+summary(modelo)$coefficients
+```
+
+```{r}
+par(mfrow=c(2,2))
+plot(modelo)
+```
+
+**CASO No 5**
+
+```{r}
+set.seed(123)
+n <- 40
+Edad <- sample(20:70, n, replace = TRUE)
+Glucosa <- 70 + 0.9*Edad + rnorm(n, 0, 10)
+datos1 <- data.frame(Edad, Glucosa)
+head(datos1)
+```
+
+```{r}
+modelo1 <- lm(Glucosa ~ Edad, data = datos1)
+summary(modelo1)
+```
+
+```{r}
+plot(datos1$Edad, datos1$Glucosa,
+     main = "Glucosa vs Edad",
+     xlab = "Edad", ylab = "Glucosa")
+abline(modelo1, col="red", lwd=2)
+```
+
+**CASO No 6**
+
+```{r}
+set.seed(123)
+n <- 50
+IMC <- rnorm(n, 27, 4)
+Edad <- sample(20:75, n, replace = TRUE)
+Grasas <- rnorm(n, 80, 20)
+Colesterol <- 120 + 1.8*IMC + 0.5*Edad + 0.9*Grasas + rnorm(n, 0, 20)
+datos2 <- data.frame(Colesterol, IMC, Edad, Grasas)
+head(datos2)
+```
+
+```{r}
+modelo2 <- lm(Colesterol ~ IMC + Edad + Grasas, data = datos2)
+summary(modelo2)
+```
+
+```{r}
+par(mfrow=c(2,2))
+plot(modelo2)
+par(mfrow=c(1,1))
+```

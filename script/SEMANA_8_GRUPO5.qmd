@@ -1,0 +1,57 @@
+---
+title: "PROYECTO FINAL"
+author: "GRUPO_5"
+format: html
+editor: visual
+---
+
+## PROYECTO FINAL
+
+**INTEGRANTES:**\
+Huahuasoncco Sifuentes Rosario\
+Marzano Gomez Rocio\
+Tineo Berrospi Karol\
+Flores Ubaldo Katherine\
+Bartolo Najarro Yenny\
+\
+**SEMANA 4: Descarga de un archivo en formato CSV del repositorio GIBHUB**
+
+```         
+```
+
+```         
+```
+
+```{r}
+s04_diabetes <- read_csv("C:/Users/HP/Downloads/s04_diabetes.csv")
+View(s04_diabetes)
+```
+
+**SEMANA 8\_ COMO INSTALAR UN PAQUETE RSTUDIO-REALIZA TU GRÁFICA ESTADÍSTICO (HISTOGRAMA)**
+
+```{r}
+install.packages("fdth")
+library(fdth)
+```
+
+```{r}
+diabetes_1_ <- read_csv("C:/Users/MILAGROS/Downloads/s04_diabetes (1).csv")
+
+apertura <- diabetes_1_$Embarazos
+```
+
+```{r}
+
+#CREER TABLA Y GRAFICO 
+
+tabla <- fdt(apertura)
+tabla
+```
+
+```{r}
+
+#CREAR TABLA GRAFICOS 
+
+hist(apertura)
+hist(apertura,col= "brown")
+```

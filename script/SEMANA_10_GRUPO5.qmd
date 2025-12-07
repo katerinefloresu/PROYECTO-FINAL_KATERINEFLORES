@@ -1,0 +1,41 @@
+---
+title: "PROYECTO FINAL"
+author: "GRUPO_5"
+format: html
+editor: visual
+---
+
+## PROYECTO FINAL
+
+**INTEGRANTES:**\
+Huahuasoncco Sifuentes Rosario\
+Marzano Gomez Rocio\
+Tineo Berrospi Karol\
+Flores Ubaldo Katerine\
+Bartolo Najarro Yenny\
+\
+**SEMANA 10: Calcular las Medidas de Tendencia Central (media aritmética, mediana, moda)**
+
+```{r}
+#Descargamos un archivo en formato CSV, y lo importamos 
+
+data<- read_csv("s04_diabetes.csv") 
+View(s04_diabetes)
+```
+
+```{r}
+#CALCULAMOS LAS MEDIDAS DE TENDENCIA CENTRAL
+
+#MEDIA ARITMÉTICA
+mean(data$Embarazos)
+```
+
+```{r}
+#MEDIANA
+median(data$Embarazos)
+```
+
+```{r}
+#MODA
+mode_Embarazos<-names(sort(table(data$Embarazos),decreasing = TRUE))
+```

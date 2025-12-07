@@ -1,0 +1,33 @@
+---
+title: "Manejo de variables"
+author: "Jenny Bartolo"
+format: html
+editor: visual
+---
+
+# Semana 6
+
+**INTEGRANTES:**\
+Huahuasoncco Sifuentes Rosario\
+Marzano Gomez Rocio\
+Tineo Berrospi Karol\
+Flores Ubaldo Katerine\
+Bartolo Najarro Yenny
+
+```{r}
+install.packages("readxl")
+
+```
+
+```{r}
+library(readxl)
+
+```
+
+Para mostrar el proceso de inspección y limpieza de datos usaremos un dataset que contiene información de pacientes con artritis reumatoide. Abajo, el código para importar el dataset. Recuerda que el dataset s03_treat_artritis debe estar en tu folder "data".
+
+```{r}
+install.packages("tidyverse")
+install.packages("readxl")
+install.packages("janitor")
+```
